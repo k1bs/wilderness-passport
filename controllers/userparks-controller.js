@@ -6,7 +6,7 @@ const userParksController = {}
 userParksController.index = (req, res) => {
   UserPark.findAll()
     .then((userparks) => {
-      res.render('usersparks/usersparks-index', {
+      res.render('userparks/userparks-index', {
         userparks: userparks,
       })
     }).catch((err) => {
