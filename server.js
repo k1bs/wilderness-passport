@@ -34,6 +34,9 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
+const userParkRouter = require('./routes/userpark-routes')
+app.use('/userparks', userParkRouter)
+
 app.use('*', (req, res) => {
   res.status(404).send('Not Found')
 })

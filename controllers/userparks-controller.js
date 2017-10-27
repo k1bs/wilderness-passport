@@ -4,7 +4,7 @@ const UserPark = require('../models/userpark')
 const userParksController = {}
 
 userParksController.index = (req, res) => {
-  UserPark.findAll(req.user.id)
+  UserPark.findAll()
     .then((userparks) => {
       res.render('usersparks/usersparks-index', {
         userparks: userparks,
