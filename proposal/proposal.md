@@ -37,7 +37,7 @@ In further phases, users will be able to plan trips to parks in their passport. 
 ### Phases of Completion
 
 #### Phase -3
-- Create basic Express server app, with passport MVC
+- ~~Create basic Express server app, with passport MVC~~ Achieved 10/27/17
 - Implement parks database
 
 #### Phase -2
