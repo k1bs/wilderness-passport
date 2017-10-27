@@ -2,6 +2,7 @@
 
 ### Purpose
 
+![Wordmark](wordmark.png)
 ![Yosemite Hero Shot](yosemitevalley.jpg)
 ![NPS API Sample](NPSAPI.png)
 
