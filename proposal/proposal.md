@@ -12,11 +12,11 @@ WP will make use of the MVC pattern, running on an Express back end server. The 
 
 ### Wireframes
 
-![Wireframe](wire1.jpg)
-![Wireframe](wire2.jpg)
-![Wireframe](wire3.jpg)
-![Wireframe](wire4.jpg)
-![Wireframe](wire5.jpg)
+![Wireframe](wire1.JPG)
+![Wireframe](wire2.JPG)
+![Wireframe](wire3.JPG)
+![Wireframe](wire4.JPG)
+![Wireframe](wire5.JPG)
 
 ### Initial Thoughts
 
