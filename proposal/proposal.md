@@ -2,6 +2,7 @@
 
 ### Purpose
 
+![Yosemite Hero Shot](yosemitevalley.jpg)
 ![NPS API Sample](NPSAPI.png)
 
 Wilderness Passport is a full CRUD web application, designed to allow users to get the most out of their favorite National Parks. Users will be able to find parks near them, add their "stamps" to their passport, and see news, alerts, and articles about their favorite parks. In Phase 2, a user will be able to plan a trip to a park, and other users will be able to search for users near them who are planning trips.
