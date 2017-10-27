@@ -10,6 +10,14 @@ Wilderness Passport is a full CRUD web application, designed to allow users to g
 
 WP will make use of the MVC pattern, running on an Express back end server. The app will be initially deployed to Heroku.
 
+### Wireframes
+
+![Wireframe](wire1.jpg)
+![Wireframe](wire2.jpg)
+![Wireframe](wire3.jpg)
+![Wireframe](wire4.jpg)
+![Wireframe](wire5.jpg)
+
 ### Initial Thoughts
 
 At its core, the app will make use of the MVC pattern, and have authentication, with salted, hashed passwords. It will also make use of the Google Geolocation API, and the National Park Service Data API.
