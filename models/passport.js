@@ -1,11 +1,11 @@
 const db = require('../db/config')
 
-const UserPark = {}
+const Passport = {}
 
-UserPark.findAll = () => {
+Passport.findAll = () => {
   return db.manyOrNone(`
       SELECT * FROM users_parks
     `)
 }
 
-module.exports = UserPark
+module.exports = Passport
