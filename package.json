@@ -1,0 +1,27 @@
+{
+  "name": "wilderness-passport",
+  "version": "1.0.0",
+  "description": "National Park News and Alerts app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k1bs/wilderness-passport.git"
+  },
+  "author": "Alex Kibler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k1bs/wilderness-passport/issues"
+  },
+  "homepage": "https://github.com/k1bs/wilderness-passport#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg-promise": "^7.0.3"
+  }
+}
