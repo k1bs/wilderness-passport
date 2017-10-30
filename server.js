@@ -41,10 +41,10 @@ const parksRouter = require('./routes/park-routes')
 app.use('/parks', parksRouter)
 
 const authRouter = require('./routes/auth-routes')
-app.use('/auth', authRoutes)
+app.use('/auth', authRouter)
 
-const userRoutes = require('./routes/user-routes')
-app.use('/user', userRoutes)
+const userRouter = require('./routes/user-routes')
+app.use('/user', userRouter)
 
 app.use('*', (req, res) => {
   res.status(404).send('Not Found')

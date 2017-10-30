@@ -13,7 +13,7 @@ passport.use(
   new LocalStrategy(options, (username, password, done) => {
     User.findByUserName(username)
       .then((user) => {
-        if(!user) => {
+        if(!user) {
           return done(null, false)
         }
         if (!authHelpers.comparePass(password, user.password_digest)) {
