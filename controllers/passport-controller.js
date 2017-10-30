@@ -27,4 +27,14 @@ passportController.show = (req, res) => {
     })
 }
 
+passportController.create = (req, res) => {
+  Passport.create(parseInt(req.body.parkid), req.user.id)
+    .then((passport) => {
+      res.redirect('/passport')
+    }).catch((err) => {
+      console.log(err)
+      res.status(500).json({error: err})
+    })
+}
+
 module.exports = passportController

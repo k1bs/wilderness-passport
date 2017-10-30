@@ -1,5 +1,11 @@
 <% include ../partials/boilerplate.ejs %>
 
-
+<% parks.forEach((park) => { %>
+  <h4><%= park.name %></h4>
+  <form method="POST" action="/passport">
+    <input type="hidden" name="parkid" value="<%= park.id %>" />
+    <input type="submit" value="Add to Passport">
+  </form>
+<% }) %>
 
 <% include ../partials/end.ejs %>

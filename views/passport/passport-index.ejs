@@ -1,6 +1,8 @@
 <% include ../partials/boilerplate.ejs %>
 
-<h3>This is a passport index</h3>
+<% passport.forEach((park) => { %>
+  <h4><%= park.name %></h4>
+<% }) %>
 
 <% include ../partials/end.ejs %>
 

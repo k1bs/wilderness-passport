@@ -5,12 +5,14 @@ const Passport = {}
 Passport.findAll = () => {
   return db.manyOrNone(`
       SELECT * FROM users_parks
+      JOIN parks ON users_parks.park_id = parks.id
     `)
 }
 
 Passport.findById = (id) => {
   return db.one(`
       SELECT * FROM users_parks
+      JOIN parks ON users_parks.park_id = parks.id
       WHERE id = $1
     `, [id])
 }
