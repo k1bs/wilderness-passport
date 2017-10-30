@@ -37,6 +37,9 @@ app.get('/', (req, res) => {
 const passportRouter = require('./routes/passport-routes')
 app.use('/passport', passportRouter)
 
+const parksRouter = require('./routes/park-routes')
+app.use('/parks', parksRouter)
+
 app.use('*', (req, res) => {
   res.status(404).send('Not Found')
 })

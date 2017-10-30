@@ -8,4 +8,11 @@ Passport.findAll = () => {
     `)
 }
 
+Passport.findById = (id) => {
+  return db.one(`
+      SELECT * FROM users_parks
+      WHERE id = $1
+    `, [id])
+}
+
 module.exports = Passport

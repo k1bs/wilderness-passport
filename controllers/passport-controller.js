@@ -15,4 +15,16 @@ passportController.index = (req, res) => {
     })
 }
 
+passportController.show = (req, res) => {
+  Passport.findById(req.params.id)
+    .then((userpark) => {
+      res.render('passport/passport-show', {
+        userpark: userpark,
+      })
+    }).catch((err) => {
+      console.log(err)
+      res.status(500).json({error: err})
+    })
+}
+
 module.exports = passportController
