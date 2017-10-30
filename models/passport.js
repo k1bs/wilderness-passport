@@ -15,4 +15,20 @@ Passport.findById = (id) => {
     `, [id])
 }
 
+Passport.create = (parkid, userid) => {
+  return db.one(`
+      INSERT INTO users_parks
+      (park_id, user_id)
+      VALUES ($1, $2)
+      RETURNING *
+    `, [parkid, userid])
+}
+
+Passport.destroy = (id) => {
+  return db.none(`
+      DELETE FROM users_parks
+      WHERE id = $1
+    `, [id])
+}
+
 module.exports = Passport
