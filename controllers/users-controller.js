@@ -6,7 +6,7 @@ const usersController = {}
 usersController.index = (req, res) => {
   User.findByUserName(req.user.username)
     .then((user) => {
-      res.render('/user/user-index', {
+      res.render('user/user-index', {
         user: req.user,
       })
     }).catch((err) => {
