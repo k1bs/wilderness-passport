@@ -29,7 +29,17 @@ passportController.show = (req, res) => {
 
 passportController.create = (req, res) => {
   Passport.create(parseInt(req.body.parkid), req.user.id)
-    .then((passport) => {
+    .then(() => {
+      res.redirect('/passport')
+    }).catch((err) => {
+      console.log(err)
+      res.status(500).json({error: err})
+    })
+}
+
+passportController.delete = (req, res) => {
+  Passport.destroy(parseInt(req.params.id))
+    .then(() => {
       res.redirect('/passport')
     }).catch((err) => {
       console.log(err)

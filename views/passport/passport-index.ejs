@@ -1,7 +1,12 @@
 <% include ../partials/boilerplate.ejs %>
 
 <% passport.forEach((park) => { %>
+<% console.log(park) %>
   <h4><%= park.name %></h4>
+  <form method="POST" action="/passport/<%= park.id %>?_method=DELETE">
+    <input type="hidden" name="parkid" value="<%= park.id %>" />
+    <input type="submit" value="Remove">
+  </form>
 <% }) %>
 
 <% include ../partials/end.ejs %>
