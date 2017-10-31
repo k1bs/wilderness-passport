@@ -2,7 +2,7 @@ require('isomorphic-fetch')
 const Passport = require('../../models/passport')
 
 function parksInitialFetch(req, res, next) {
-  fetch(`https://developer.nps.gov/api/v1/parks?limit=700&api_key=${process.env.API_KEY}`)
+  fetch(`https://developer.nps.gov/api/v1/parks?limit=700&api_key=${process.env.PARK_API_KEY}`)
     .then(response => response.json())
     .then(jsonRes => {
       res.locals.parksArray = jsonRes.data
