@@ -3,26 +3,46 @@ body {
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
   flex: 1;
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Patua One', sans-serif;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-hero-background {
   background: url('https://www.nationalparks.org/sites/default/files/yosemite-merced.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
+  justify-content: center;
 }
 
-main h1 {
-  font-family: 'Patua One', sans-serif;
-  font-size: 5em;
+.home-hero-background h1 {
+  font-size: 15vmin;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
 }
 
 header, footer {
   flex: 0;
+  width: 100%;
 }
 
 header {
@@ -43,14 +63,14 @@ footer {
 }
 
 header img {
-  height: 80px;
-  width: auto;
+  height: auto;
+  width: 70vw;
 }
 
 header a {
-  text-decoration: none;
   color: white;
   font-family: 'Patua One', sans-serif;
+  font-size: 4vmin;
 }
 
 header ul {
@@ -60,4 +80,12 @@ header ul {
 
 header li {
   padding: 5px;
+}
+
+.park {
+  border-right: 1px solid white;
+  border-left: 10px solid white;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+  margin: 3vmin;
+  padding: 3vmin;
 }

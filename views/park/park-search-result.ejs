@@ -1,5 +1,5 @@
 <% include ../partials/boilerplate.ejs %>
-
+<main>
 <% parks.forEach((park) => { %>
   <h4><%= park.name %></h4>
   <form method="POST" action="/passport">
@@ -7,5 +7,5 @@
     <input type="submit" value="Add to Passport">
   </form>
 <% }) %>
-
+</main>
 <% include ../partials/end.ejs %>
