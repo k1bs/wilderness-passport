@@ -18,6 +18,7 @@ Park.createSeveral = (parks) => {
 Park.findAll = () => {
   return db.manyOrNone(`
       SELECT * FROM parks
+      ORDER BY name
     `)
 }
 
@@ -26,6 +27,7 @@ Park.findByStateOrName = (state, name) => {
       SELECT * FROM parks
       WHERE lower(states) LIKE '%$1:value%'
       OR lower(name) LIKE '%$2:value%'
+      ORDER BY name
     `, [state.toLowerCase(), name.toLowerCase()])
 }
 

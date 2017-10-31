@@ -7,6 +7,7 @@ Passport.findAll = (userid) => {
       SELECT * FROM users_parks
       JOIN parks ON users_parks.park_id = parks.id
       WHERE users_parks.user_id = $1
+      ORDER BY parks.name
     `, [userid])
 }
 
@@ -15,6 +16,7 @@ Passport.findById = (id) => {
       SELECT * FROM users_parks
       JOIN parks ON users_parks.park_id = parks.id
       WHERE users_parks.passport_id = $1
+      ORDER BY parks.name
     `, [id])
 }
 
