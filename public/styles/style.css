@@ -83,9 +83,12 @@ header li {
 }
 
 .park {
-  border-right: 1px solid white;
-  border-left: 10px solid white;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+  border: 1px solid lightgrey;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.15);
   margin: 3vmin;
   padding: 3vmin;
+}
+
+.park p {
+  padding-bottom: 5px;
 }
