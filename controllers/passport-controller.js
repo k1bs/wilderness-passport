@@ -6,7 +6,7 @@ require('isomorphic-fetch')
 const passportController = {}
 
 passportController.index = (req, res) => {
-  Passport.findAll()
+  Passport.findAll(req.user.id)
     .then((passport) => {
       res.render('passport/passport-index', {
         passport: passport,
@@ -43,6 +43,16 @@ passportController.delete = (req, res) => {
   Passport.destroy(parseInt(req.body.parkid), req.user.id)
     .then(() => {
       res.redirect('/passport')
+    }).catch((err) => {
+      console.log(err)
+      res.status(500).json({error: err})
+    })
+}
+
+passportController.update = (req, res) => {
+  Passport.visitToggle(req.params.id)
+    .then((userpark) => {
+      res.redirect(`/passport/${userpark.passport_id}`)
     }).catch((err) => {
       console.log(err)
       res.status(500).json({error: err})

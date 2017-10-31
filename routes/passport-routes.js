@@ -8,6 +8,7 @@ passportRouter.get('/', authHelpers.loginRequired, passportController.index)
 passportRouter.post('/', authHelpers.loginRequired, passportController.create)
 
 passportRouter.get('/:id', authHelpers.loginRequired, passportController.show)
+passportRouter.put('/:id', authHelpers.loginRequired, passportController.update)
 
 passportRouter.delete('/:id', authHelpers.loginRequired, passportController.delete)
 
