@@ -2,10 +2,13 @@ const express = require('express')
 const passportRouter = express.Router()
 
 const passportController = require('../controllers/passport-controller')
+const authHelpers = require('../services/auth/auth-helpers')
 
-passportRouter.get('/', passportController.index)
-passportRouter.post('/', passportController.create)
+passportRouter.get('/', authHelpers.loginRequired, passportController.index)
+passportRouter.post('/', authHelpers.loginRequired, passportController.create)
 
-passportRouter.delete('/:id', passportController.delete)
+passportRouter.get('/:id', authHelpers.loginRequired, passportController.show)
+
+passportRouter.delete('/:id', authHelpers.loginRequired, passportController.delete)
 
 module.exports = passportRouter

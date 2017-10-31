@@ -1,5 +1,7 @@
 const bcrypt = require('bcryptjs')
 const Passport = require('../models/passport')
+const parksHelpers = require('../services/parks/parks-helpers')
+require('isomorphic-fetch')
 
 const passportController = {}
 

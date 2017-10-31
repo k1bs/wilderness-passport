@@ -13,7 +13,7 @@ Passport.findById = (id) => {
   return db.one(`
       SELECT * FROM users_parks
       JOIN parks ON users_parks.park_id = parks.id
-      WHERE id = $1
+      WHERE users_parks.passport_id = $1
     `, [id])
 }
 
@@ -26,11 +26,11 @@ Passport.create = (parkid, userid) => {
     `, [parkid, userid])
 }
 
-Passport.destroy = (parkid, userid) => {
+Passport.destroy = (parkid) => {
   return db.none(`
       DELETE FROM users_parks
-      WHERE park_id = $1 AND user_id = $2
-    `, [parkid, userid])
+      WHERE passport_id = $1
+    `, [parkid])
 }
 
 module.exports = Passport
