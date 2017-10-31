@@ -25,4 +25,17 @@ parksController.index = (req, res) => {
     })
 }
 
+parksController.findByStateOrName = (req, res) => {
+  console.log(res.locals.state + ' ' + req.body.name)
+  Park.findByStateOrName(res.locals.state, req.body.name)
+    .then((parks) => {
+      res.render('park/park-search-result' ,{
+        parks: parks,
+      })
+    }).catch((err) => {
+      console.log(err)
+      res.status(500).json({error: err})
+    })
+}
+
 module.exports = parksController

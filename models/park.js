@@ -21,18 +21,19 @@ Park.findAll = () => {
     `)
 }
 
-Park.findByState = (state) => {
-  return db.oneOrMany(`
+Park.findByStateOrName = (state, name) => {
+  return db.manyOrNone(`
       SELECT * FROM parks
-      WHERE states LIKE '%$1%'
-    `, [state])
+      WHERE lower(states) LIKE '%$1:value%'
+      OR lower(name) LIKE '%$2:value%'
+    `, [state.toLowerCase(), name.toLowerCase()])
 }
 
-Park.findByName = (name) => {
-  return db.oneOrMany(`
-      SELECT * FROM parks
-      WHERE name LIKE '%$1%'
-    `)
-}
+// Park.findByName = (name) => {
+//   return db.oneOrMany(`
+//       SELECT * FROM parks
+//       WHERE name LIKE '%$1%'
+//     `)
+// }
 
 module.exports = Park

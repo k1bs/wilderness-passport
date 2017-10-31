@@ -26,11 +26,11 @@ Passport.create = (parkid, userid) => {
     `, [parkid, userid])
 }
 
-Passport.destroy = (id) => {
+Passport.destroy = (parkid, userid) => {
   return db.none(`
       DELETE FROM users_parks
-      WHERE id = $1
-    `, [id])
+      WHERE park_id = $1 AND user_id = $2
+    `, [parkid, userid])
 }
 
 module.exports = Passport

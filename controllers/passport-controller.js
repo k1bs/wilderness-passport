@@ -38,7 +38,7 @@ passportController.create = (req, res) => {
 }
 
 passportController.delete = (req, res) => {
-  Passport.destroy(parseInt(req.params.id))
+  Passport.destroy(parseInt(req.body.parkid), req.user.id)
     .then(() => {
       res.redirect('/passport')
     }).catch((err) => {

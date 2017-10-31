@@ -1,12 +1,5 @@
 <% include ../partials/boilerplate.ejs %>
 
-<h3>Search by name or address</h3>
-<form method="POST" action="/parks/search">
-  <input type="text" name="name" placeholder="Name" />
-  <input type="text" name="address" placeholder="Address" />
-  <input type="submit" value="Search">
-</form>
-
 <% parks.forEach((park) => { %>
   <h4><%= park.name %></h4>
   <form method="POST" action="/passport">
