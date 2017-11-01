@@ -1,11 +1,10 @@
 <% include ../partials/boilerplate.ejs %>
-<main>
+<main class="content-main">
 <div class="parks-container">
   <% passport.forEach((userpark) => { %>
-    <a href="/passport/<%= userpark.passport_id %>"><div class="park">
-      <h4><%= userpark.name %></h4>
-      <p><%= userpark.description %></p>
-    </div></a>
+    <div class="park">
+      <a href="/passport/<%= userpark.passport_id %>"><h4><%= userpark.name %></h4></a>
+    </div>
   <% }) %>
 </div>
 </main>

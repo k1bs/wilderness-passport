@@ -1,5 +1,5 @@
 <% include ../partials/boilerplate %>
-<main>
+<main class="content-main">
 
 <div class="form-container">
   <h3>Search by name or address</h3>
@@ -10,15 +10,16 @@
   </form>
 </div>
 
-<% parks.forEach((park) => { %>
-<div class="park">
-  <h4><%= park.name %></h4>
-  <p><%= park.description %></p>
-  <form method="POST" action="/passport">
-    <input type="hidden" name="parkid" value="<%= park.id %>" />
-    <input type="submit" value="Add to Passport">
-  </form>
+<div class="parks-container">
+  <% parks.forEach((park) => { %>
+    <div class="park">
+      <h4><%= park.name %></h4>
+      <form method="POST" action="/passport">
+        <input type="hidden" name="parkid" value="<%= park.id %>" />
+        <input type="submit" value="Add to Passport">
+      </form>
+    </div>
+  <% }) %>
 </div>
-<% }) %>
 </main>
 <% include ../partials/end %>

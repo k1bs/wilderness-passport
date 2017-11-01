@@ -1,18 +1,22 @@
 <% include ../partials/boilerplate.ejs %>
-<main>
-  <h4><%= userpark.name %></h4>
-  <form method="POST" action="/passport/<%= userpark.passport_id %>?_method=DELETE">
-    <input type="hidden" name="parkid" value="<%= userpark.passport_id %>" />
-    <input type="submit" value="Remove from Passport">
-  </form>
-  <form method="POST" action="/passport/<%= userpark.passport_id %>?_method=PUT">
-    <input type="hidden" name="parkid" value="<%= userpark.passport_id %>" />
-    <% if (!userpark.visited) { %>
-      <input type="submit" value="I've visited">
-    <% } else { %>
-      <input type="submit" value="I haven't visited">
-    <% } %>
-  </form>
+<main class="content-main">
+  <div class="parks-container">
+      <div class="park">
+      <h4><%= userpark.name %></h4>
+      <form method="POST" action="/passport/<%= userpark.passport_id %>?_method=DELETE">
+        <input type="hidden" name="parkid" value="<%= userpark.passport_id %>" />
+        <input type="submit" value="Remove from Passport">
+      </form>
+      <form method="POST" action="/passport/<%= userpark.passport_id %>?_method=PUT">
+        <input type="hidden" name="parkid" value="<%= userpark.passport_id %>" />
+        <% if (!userpark.visited) { %>
+          <input type="submit" value="I've visited">
+        <% } else { %>
+          <input type="submit" value="I haven't visited">
+        <% } %>
+      </form>
+    </div>
+  </div>
 
 </main>
 

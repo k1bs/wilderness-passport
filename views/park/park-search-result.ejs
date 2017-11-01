@@ -1,11 +1,16 @@
 <% include ../partials/boilerplate.ejs %>
-<main>
+<main class="content-main">
+  <div class="parks-container search-container">
 <% parks.forEach((park) => { %>
-  <h4><%= park.name %></h4>
-  <form method="POST" action="/passport">
-    <input type="hidden" name="parkid" value="<%= park.id %>" />
-    <input type="submit" value="Add to Passport">
-  </form>
+  <div class="park search-result">
+    <h4><%= park.name %></h4>
+    <p><%= park.description %></p>
+      <form method="POST" action="/passport">
+        <input type="hidden" name="parkid" value="<%= park.id %>" />
+        <input type="submit" value="Add to Passport">
+      </form>
+  </div>
 <% }) %>
+</div>
 </main>
 <% include ../partials/end.ejs %>
