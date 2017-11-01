@@ -58,6 +58,12 @@ a:link, a:visited, a:hover, a:active {
   text-shadow: 4px 4px 10px rgba(0,0,0,0.6);
 }
 
+.auth-hero-background h3 {
+  color: white;
+  font-size: 5vmin;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.6);
+}
+
 .user-hero-background {
   background: url('https://www.nationalgeographic.com/content/dam/travel/rights-exempt/Travel-2016/59-parks-52-weeks/sequoia/giant-tree-trail-sequoia-national-park.jpg') no-repeat center center fixed;
   background-size: cover;
