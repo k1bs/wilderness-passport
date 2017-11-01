@@ -2,14 +2,10 @@
 <main>
 <div class="parks-container">
   <% passport.forEach((userpark) => { %>
-    <div class="park">
-      <a href="/passport/<%= userpark.passport_id %>"><h4><%= userpark.name %></h4></a>
+    <a href="/passport/<%= userpark.passport_id %>"><div class="park">
+      <h4><%= userpark.name %></h4>
       <p><%= userpark.description %></p>
-      <form method="POST" action="/passport/<%= userpark.passport_id %>?_method=DELETE">
-        <input type="hidden" name="parkid" value="<%= userpark.passport_id %>" />
-        <input type="submit" value="Remove">
-      </form>
-    </div>
+    </div></a>
   <% }) %>
 </div>
 </main>
