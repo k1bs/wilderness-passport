@@ -112,6 +112,10 @@ form {
   flex-direction: column;
 }
 
+.visit-button input[type=submit] {
+  background: #C56C3A;
+}
+
 .park {
   display: flex;
   flex-direction: column;
@@ -131,6 +135,12 @@ form {
   display: flex;
   flex-direction: column;
   background: lightgrey;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-logo {
@@ -164,11 +174,14 @@ form {
   .form-container {
     background: white;
     flex: 0;
+    min-width: 400px;
+    max-width: 500px;
+    align-self: center;
   }
 
   .nav-logo {
     content: url('/images/wplogo-short.png');
-    height: 100px;
+    height: 90px;
     width: auto;
   }
 
@@ -200,6 +213,11 @@ form {
     display: flex;
     /*flex: 0;*/
   }
+
+  .show {
+    height: auto;
+    min-height: 200px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -207,3 +225,10 @@ form {
     min-width: 740px;
   }
 }
+
+@media screen and (min-width: 1150px) {
+  .nav-logo {
+    content: url('/images/wplogo-long.png');
+  }
+}
+
