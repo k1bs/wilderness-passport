@@ -42,11 +42,32 @@ a:link, a:visited, a:hover, a:active {
 .home-hero-background h1 {
   font-size: 15vmin;
   text-shadow: 4px 4px 10px rgba(0,0,0,0.6);
+  color: white;
 }
 
 .auth-hero-background {
   background: url('https://www.doi.gov/sites/doi.gov/files/uploads/ZionNPKevinRoland.jpg') no-repeat center center fixed;
   background-size: cover;
+  color: white;
+  justify-content: center;
+}
+
+.auth-hero-background h1 {
+  color: white;
+  font-size: 9vmin;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.6);
+}
+
+.user-hero-background {
+  background: url('https://www.nationalgeographic.com/content/dam/travel/rights-exempt/Travel-2016/59-parks-52-weeks/sequoia/giant-tree-trail-sequoia-national-park.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  justify-content: center;
+}
+
+.user-main h3 {
+  font-size: 4vmin;
+  color: white;
 }
 
 header, footer {
@@ -134,7 +155,7 @@ form {
   padding: 3vmin;
   display: flex;
   flex-direction: column;
-  background: lightgrey;
+  background: white;
 }
 
 .button-container {
@@ -149,6 +170,10 @@ form {
   width: 70vw;
 }
 
+#first-line, #second-line {
+  opacity: 0;
+}
+
 @media screen and (min-width: 768px) {
   header {
     flex-direction: row;
@@ -161,6 +186,7 @@ form {
     flex: 1 1 auto;
     /*background: red;*/
     justify-content: center;
+    align-items: start;
   }
 
   header li {
@@ -174,6 +200,9 @@ form {
   .form-container {
     background: white;
     flex: 0;
+  }
+
+  .login-form {
     min-width: 400px;
     max-width: 500px;
     align-self: center;

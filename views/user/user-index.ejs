@@ -1,5 +1,8 @@
 <% include ../partials/boilerplate %>
-<main class="content-main">
-  <h3><%= user.firstname %></h3>
+<main class="user-hero-background">
+  <div class="user-main">
+    <h3>Welcome Back, <%= user.firstname %></h3><br>
+    <a href="/auth/logout"><h3>Logout</h3></a>
+  </div>
 </main>
 <% include ../partials/end %>
