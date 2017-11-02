@@ -26,8 +26,8 @@ In further phases, users will be able to plan trips to parks in their passport, 
 
 ### Wireframes
 
-![Wireframe](wireframe2.jpg)
-![Wireframe](wireframe4.jpg)
+![Wireframe](proposal/wireframe2.jpg)
+![Wireframe](proposal/wireframe4.jpg)
 
 ### Future Plans
 
