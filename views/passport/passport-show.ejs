@@ -4,6 +4,15 @@
       <div class="park show">
       <h4><%= userpark.name %></h4>
       <p><%= userpark.description %></p>
+      <% if (alertRequest.total !== 0) { %>
+      <h3 class="alert-hero">Alerts</h3>
+      <% alertRequest.data.forEach((useralert) => { %>
+      <div class="alert-container">
+        <h5 class="alert-title"><%= useralert.title %></h5>
+      <p class="alert-text"><%= useralert.description %></p>
+      </div>
+      <% }) %>
+      <% } %>
       <div class="button-container">
         <form method="POST" action="/passport/<%= userpark.passport_id %>?_method=DELETE">
           <input type="hidden" name="parkid" value="<%= userpark.passport_id %>" />
