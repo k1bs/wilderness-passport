@@ -22,13 +22,15 @@ passportController.show = (req, res) => {
   Passport.findById(req.params.id)
     .then((userpark) => {
       let alertRequest = fetch(`https://developer.nps.gov/api/v1/alerts?parkCode=${userpark.code}&api_key=${process.env.PARK_API_KEY}`).then(res => res.json())
-      return Promise.all([userpark, alertRequest])
+      let picRequest = fetch(`https://developer.nps.gov/api/v1/parks?parkCode=${userpark.code}&fields=images&api_key=${process.env.PARK_API_KEY}`).then(res => res.json())
+      return Promise.all([userpark, alertRequest, picRequest])
     })
     .then((promiseArray) => {
       console.log(promiseArray[1])
       res.render('passport/passport-show', {
         userpark: promiseArray[0],
         alertRequest: promiseArray[1],
+        picRequest: promiseArray[2],
       })
     }).catch((err) => {
       console.log(err)
