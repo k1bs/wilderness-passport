@@ -38,24 +38,27 @@ In further phases, users will be able to plan trips to parks in their passport. 
 
 #### Phase -3
 - ~~Create basic Express server app, with passport MVC~~ Achieved 10/27/17
-- Implement parks database
+- ~~Implement parks database~~
 
 #### Phase -2
-- Implement authentication
-- Basic Styling
-- Main view
+- ~~Implement authentication~~
+- ~~Basic Styling~~
+- ~~Main view~~
 
 #### Phase -1
-- Account page
-- Individual Park views
-- Park search
+- ~~Account page~~
+- ~~Individual Park views~~
+- ~~Park search~~
 
 #### Phase 0
-- Final styling
-- Deployment
+- ~~Final styling~~
+- ~~Deployment~~ Achieved 11/2/17
 
 #### Phase 1
-- Trip planning functionality
+- Article and News views
 
 #### Phase 2
+- Trip planning functionality
+
+#### Phase 3
 - Nearby trip search
